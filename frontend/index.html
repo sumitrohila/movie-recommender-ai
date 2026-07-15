@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎬 Movie Recommender AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎬 Movie Recommender</h1>
+      <p class="subtitle">AI‑powered suggestions via LangChain, LangGraph &amp; CrewAI</p>
+    </header>
+
+    <form id="recommendForm">
+      <div class="form-group">
+        <label for="userInput">What are you in the mood for?</label>
+        <textarea id="userInput" placeholder="e.g. I love sci‑fi with deep stories and great visuals" required>I love sci‑fi with deep stories and great visuals</textarea>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="modeSelect">Orchestration Mode</label>
+          <select id="modeSelect">
+            <option value="crew">CrewAI (multi‑agent)</option>
+            <option value="chain">LangChain (LCEL)</option>
+            <option value="graph">LangGraph (state machine)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferencesInput">Preferences (optional JSON)</label>
+          <input type="text" id="preferencesInput" placeholder='{"liked_genres": ["Sci-Fi"]}' />
+        </div>
+      </div>
+
+      <button type="submit" class="btn" id="submitBtn">✨ Get Recommendations</button>
+    </form>
+
+    <div id="loading">
+      <span class="spinner"></span> Thinking… please wait
+    </div>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
