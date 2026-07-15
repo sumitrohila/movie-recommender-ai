@@ -1,0 +1,11 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.0
+pydantic-settings==2.7.0
+python-dotenv==1.0.1
+langchain==0.3.15
+langchain-openai==0.3.6
+langgraph==0.3.2
+crewai==0.80.2
+redis==5.2.1
+sqlalchemy==2.0.38
+httpx==0.28.1
